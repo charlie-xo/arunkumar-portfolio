@@ -10,7 +10,6 @@ import {
   Briefcase, 
   Star, 
   Download, 
-  Send, 
   MessageCircle,
   ExternalLink,
   Code2,
@@ -28,7 +27,7 @@ const portfolioData = {
     email: "arunkumarr09032003@gmail.com",
     phone: "+919025604721",
     whatsapp: "+919025604721",
-    linkedin: "https://www.linkedin.com/in/your-profile", // Updated URL
+    linkedin: "https://www.linkedin.com/in/your-profile", 
     github: "https://github.com/charlie-xo?tab=packages",
   },
   skills: {
@@ -192,7 +191,7 @@ export default function PortfolioPage() {
                 { icon: <Linkedin size={22} />, link: portfolioData.contact.linkedin },
                 { icon: <Mail size={22} />, link: `mailto:${portfolioData.contact.email}` }
               ].map((social, i) => (
-                <a key={i} href={social.link} className="hover:text-indigo-400 transition-colors p-2 text-gray-400">
+                <a key={i} href={social.link} className="hover:text-indigo-400 transition-colors p-2 text-gray-400" target="_blank" rel="noopener noreferrer">
                   {social.icon}
                 </a>
               ))}
@@ -253,7 +252,7 @@ export default function PortfolioPage() {
                     {project.tech.map(t => <span key={t} className="text-xs uppercase tracking-widest text-gray-500 font-bold">{t}</span>)}
                 </div>
                 {project.liveLink && (
-                  <a href={project.liveLink} target="_blank" className="inline-flex items-center gap-2 text-white font-bold group/link">
+                  <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-white font-bold group/link">
                     Explore Project <ExternalLink size={16} className="group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
                   </a>
                 )}
@@ -287,7 +286,7 @@ export default function PortfolioPage() {
         <Section id="contact" title="Get In Touch" icon={<MessageCircle size={28} />}>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-start">
             <motion.div variants={itemVariants} className="space-y-6">
-                <h3 className="text-2xl font-bold text-white">Let's build something amazing together.</h3>
+                <h3 className="text-2xl font-bold text-white">Let&apos;s build something amazing together.</h3>
                 <p className="text-gray-400">Feel free to reach out for collaborations or just a friendly hello!</p>
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 text-gray-300 hover:text-white transition-colors">
